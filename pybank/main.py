@@ -41,11 +41,11 @@ with open (csvpath, 'r') as csvfile:
     with open(txt_file,"w") as newfile:
         newfile.write(f"Financial Analysis")
         newfile.write(f"----------------------------------")
-        newfile.write(f"Total Months: {str(total_months)}")
-        newfile.write(f"Total: ${str(total_profit)}")
-        newfile.write(f"Average Change: ${avg_monthly_profit_changes}")
-        newfile.write(f"Greatest Increase in Profits: {total_months[greatest_increase_month]} (${str(greatest_increase)})")
-        newfile.write(f"Greatest Decrease in Profits: {total_months[greatest_decrease_month]} (${str(greatest_decrease)})")
+        newfile.write(f"Total Months: {len(total_months)}")
+        newfile.write(f"Total: ${sum(total_profit)}")
+        newfile.write(f"Average Change: ${avg_monthly_profit_changes: .2f}")
+        newfile.write(f"Greatest Increase in Profits: {total_months[greatest_increase_month]} (${greatest_increase})")
+        newfile.write(f"Greatest Decrease in Profits: {total_months[greatest_decrease_month]} (${greatest_decrease})")
     
 
 
